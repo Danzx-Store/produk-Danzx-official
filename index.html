@@ -1,0 +1,209 @@
+<!doctype html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Danzx Official — VPS, Produk & Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#071014;
+      --card:#0f1720;
+      --muted:#9fb0b6;
+      --accent:#00d48a;
+      --danger:#ff6b6b;
+      --radius:14px;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:linear-gradient(180deg,#071014 0%, #081217 100%);color:#eef6f4;padding:20px}
+    .container{max-width:760px;margin:0 auto}
+    .header{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+    .logo{background:rgba(0,212,138,0.08);color:var(--accent);padding:8px 12px;border-radius:10px;font-weight:700}
+    h1{margin:0;font-size:20px}
+    .subtitle{color:var(--muted);margin-top:6px;font-size:14px}.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:16px;margin-bottom:14px;border:1px solid rgba(255,255,255,0.03)}
+.hidden{display:none}
+
+.prod-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.prod{background:rgba(255,255,255,0.02);padding:12px;border-radius:12px;display:flex;flex-direction:column;gap:8px}
+.prod .title{font-weight:700;color:var(--accent)}
+.prod .meta{color:var(--muted);font-size:14px}
+.price{font-weight:800;font-size:18px}
+.status{font-weight:700;padding:6px 8px;border-radius:8px;font-size:13px}
+.status.open{background:rgba(0,212,138,0.09);color:var(--accent)}
+.status.close{background:rgba(255,107,107,0.08);color:var(--danger)}
+
+.benefit{display:flex;flex-direction:column;gap:8px;color:var(--muted);margin-top:8px}
+.benefit b{color:#eafdf3}
+
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.btn{display:inline-block;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700;text-align:center}
+.btn.wa{background:linear-gradient(90deg,#00c78a,#00a77a);color:#042916}
+.btn.tg{background:linear-gradient(90deg,#0088cc,#0066a2);color:white}
+.btn.testi{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.btn.switch{background:transparent;border:1px solid var(--accent);color:var(--accent);margin-bottom:12px}
+
+.qris-wrap{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.qris-img{width:220px;height:220px;border-radius:12px;border:6px solid rgba(255,255,255,0.03);background:#fff;display:grid;place-items:center}
+.qris-note{color:var(--muted);max-width:420px}
+
+footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+@media (max-width:640px){
+  .prod-list{grid-template-columns:1fr}
+  .qris-img{width:160px;height:160px}
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="btn switch" onclick="switchPage('produk')">Halaman VPS</button>
+    <button class="btn switch" onclick="switchPage('produk2')">Halaman Produk Lain</button>
+    <button class="btn switch" onclick="switchPage('payment')">Halaman Payment</button><!-- HALAMAN 1: VPS -->
+<div id="produk" class="page">
+  <div class="header">
+    <div class="logo">Danzx Official</div>
+    <div>
+      <h1>Ready VPS — DigitalOcean High Quality</h1>
+      <div class="subtitle">Pilihan paket VPS DigitalOcean, stabil & cepat</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:700;margin-bottom:8px">Produk VPS</div>
+    <div class="prod-list">
+      <div class="prod"><div class="title">Ram 4 Core 2</div><div class="meta">Rp25.000 /bulan</div><div class="status open">Open</div></div>
+      <div class="prod"><div class="title">Ram 8 Core 4</div><div class="meta">Rp30.000 /bulan</div><div class="status open">Open</div></div>
+      <div class="prod"><div class="title">Ram 16 Core 4</div><div class="meta">Rp40.000 /bulan</div><div class="status open">Open</div></div>
+      <div class="prod"><div class="title">Ram 16 Core 8</div><div class="meta">Rp45.000 /bulan</div><div class="status open">Open</div></div>
+      <div class="prod" style="grid-column:1/3"><div class="title">Ram 32 Core 8</div><div class="meta">Rp60.000 /bulan</div><div class="status close">Close</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:700;margin-bottom:8px">Benefit Pembelian</div>
+    <div class="benefit">
+      <div>↠ 📈 <b>High Quality, Awet Dan Stabil</b></div>
+      <div>↠ 🛡️ <b>Free Install Anti Rusuh</b></div>
+      <div>↠ ✅ <b>Free Install Panel Pterodactyl</b></div>
+      <div>↠ 🎇 <b>Free Install Thema (Ram 8 - 16)</b></div>
+      <div>↠ 🌐 <b>Free Request Domain Panel</b></div>
+      <div>↠ ⚙️ <b>Free Request Region Dan OS</b></div>
+      <div>↠ ✅ <b>Masa Aktif VPS 25-30 Hari</b></div>
+      <div>↠ ✅ <b>Garansi 10 Hari (1x Replace)</b></div>
+    </div>
+
+    <div class="cta">
+      <a class="btn wa" href="https://wa.me/message/ERSXCO6NCTO5B1" target="_blank">Minat? PV WhatsApp</a>
+      <a class="btn tg" href="https://t.me/Danzx_Official" target="_blank">Hubungi Telegram</a>
+      <a class="btn testi" href="https://whatsapp.com/channel/0029VbBSKdh8aKvShLrENh11" target="_blank">Lihat Testimoni</a>
+    </div>
+  </div>
+
+  <footer>© Danzx Official — Ready VPS DigitalOcean</footer>
+</div>
+
+<!-- HALAMAN 2: PRODUK LAIN -->
+<div id="produk2" class="page hidden">
+  <div class="header">
+    <div class="logo">Danzx Official</div>
+    <div>
+      <h1>Produk Lain Danzx Official</h1>
+      <div class="subtitle">Panel, script, dan layanan tambahan</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:700;margin-bottom:8px">Daftar Produk Lain</div>
+    <div class="prod-list">
+      <div class="prod"><div class="title">Panel Pterodactyl 1-10GB</div><div class="meta">Rp2.000 - Rp9.000</div></div>
+      <div class="prod"><div class="title">Panel Pterodactyl Unlimited</div><div class="meta">Rp10.000</div></div>
+      <div class="prod"><div class="title">Reseller Panel</div><div class="meta">Rp14.000</div></div>
+      <div class="prod"><div class="title">Admin Panel</div><div class="meta">Rp16.000</div></div>
+      <div class="prod"><div class="title">PT Panel</div><div class="meta">Rp25.000</div></div>
+      <div class="prod"><div class="title">Owner Panel</div><div class="meta">Rp30.000</div></div>
+      <div class="prod"><div class="title">Tangan Kanan Panel</div><div class="meta">Rp35.000</div></div>
+      <div class="prod"><div class="title">Install Panel</div><div class="meta">Rp5.000</div></div>
+      <div class="prod"><div class="title">Install Protect</div><div class="meta">Rp5.000</div></div>
+      <div class="prod"><div class="title">Script Danzo MD Free Update</div><div class="meta">Rp40.000</div></div>
+      <div class="prod"><div class="title">Reseller Script Danzo MD</div><div class="meta">Rp100.000</div></div>
+      <div class="prod"><div class="title">Script Selfbot</div><div class="meta">Rp25.000</div></div>
+      <div class="prod"><div class="title">Script Push Kontak</div><div class="meta">Rp15.000</div></div>
+      <div class="prod"><div class="title">Script Alice Assistant</div><div class="meta">Rp35.000</div></div>
+      <div class="prod"><div class="title">Script Ochobotz</div><div class="meta">Rp25.000</div></div>
+      <div class="prod"><div class="title">Reseller Script Ochobotz</div><div class="meta">Rp35.000</div></div>
+      <div class="prod"><div class="title">Script Protect Panel</div><div class="meta">Rp25.000</div></div>
+      <div class="prod"><div class="title">Script Bug Nika</div><div class="meta">Rp25.000</div></div>
+      <div class="prod"><div class="title">Script Bug Justin</div><div class="meta">Rp20.000</div></div>
+      <div class="prod"><div class="title">Script Vairezyne</div><div class="meta">Rp15.000</div></div>
+      <div class="prod"><div class="title">Reseller Script Vairezyne</div><div class="meta">Rp25.000</div></div>
+      <div class="prod"><div class="title">Admin Saluran WhatsApp</div><div class="meta">Rp10.000 - Rp15.000</div></div>
+      <div class="prod"><div class="title">Saluran WhatsApp</div><div class="meta">Hubungi Admin</div></div>
+    </div>
+
+    <div class="cta">
+      <a class="btn wa" href="https://wa.me/message/ERSXCO6NCTO5B1" target="_blank">Pesan via WhatsApp</a>
+      <a class="btn tg" href="https://t.me/Danzx_Official" target="_blank">Pesan via Telegram</a>
+    </div>
+  </div>
+
+  <footer>© Danzx Official — Produk Lain</footer>
+</div>
+
+<!-- HALAMAN 3: PAYMENT -->
+<div id="payment" class="page hidden">
+  <div class="header">
+    <div class="logo">Danzx Official</div>
+    <div>
+      <h1>Payment Danzx Official</h1>
+      <div class="subtitle">Metode pembayaran resmi Danzx Official</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:700;margin-bottom:8px">Metode Pembayaran</div>
+    <ul style="list-style:none;padding:0;margin:0;color:var(--muted);line-height:1.8">
+      <li>💳 Dana: <b>08133124186 (Danzx)</b></li>
+      <li>💰 Qris: <b>Tersedia (lihat QRIS di bawah)</b></li>
+    </ul>
+    <div class="cta">
+      <a class="btn wa" href="https://wa.me/message/ERSXCO6NCTO5B1" target="_blank">Konfirmasi via WhatsApp</a>
+      <a class="btn tg" href="https://t.me/Danzx_Official" target="_blank">Konfirmasi via Telegram</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:700;margin-bottom:8px">QRIS</div>
+    <div class="qris-wrap">
+      <div class="qris-img">
+        <img src="https://files.catbox.moe/sx9cc2.jpg" alt="QRIS Danzx Official" style="max-width:100%;max-height:100%;border-radius:6px;display:block" />
+      </div>
+      <div class="qris-note">
+        <p style="margin:0 0 8px;color:#eafdf3"><b>Scan QRIS</b> untuk melakukan pembayaran via dompet digital. Setelah membayar, kirim bukti ke admin WhatsApp atau Telegram untuk konfirmasi.</p>
+        <p style="margin:0;color:var(--muted)">Jika QRIS tidak tampil, klik kanan pada gambar lalu buka di tab baru atau hubungi admin.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:700;margin-bottom:8px">Catatan</div>
+    <div class="benefit">
+      <div>↠ Pastikan nama dan nominal sesuai sebelum transfer.</div>
+      <div>↠ Kirim bukti pembayaran ke admin via WhatsApp atau Telegram.</div>
+      <div>↠ VPS akan aktif 5-10 menit setelah pembayaran dikonfirmasi.</div>
+    </div>
+  </div>
+
+  <footer>© Danzx Official — Payment Page</footer>
+</div>
+
+  </div>  <script>
+    function switchPage(page){
+      document.querySelectorAll('.page').forEach(p=>p.classList.add('hidden'));
+      document.getElementById(page).classList.remove('hidden');
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+  </script></body>
+</html>
